@@ -1,0 +1,979 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+html, body {
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: Bebas_Neue_Regular;
+    src: url(../../fonts/Bebas/Bebas_Neue_Regular.ttf);
+    src: url(../../fonts/Bebas/Bebas_Neue_Regular.woff);
+}
+
+@font-face {
+    font-family: Bebas_Neue_Bold;
+    src: url(../../fonts/Bebas/Bebas_Neue_Bold.ttf);
+    src: url(../../fonts/Bebas/Bebas_Neue_Bold.woff);
+}
+
+@font-face {
+    font-family: PT_Sans_Caption_Regular;
+    src: url(../../fonts/PT_Sans/PT_Sans_Caption_Regular.ttf);
+    src: url(../../fonts/PT_Sans/PT_Sans_Caption_Regular.woff);
+}
+
+@font-face {
+    font-family: Raleway_Regular;
+    src: url(../../fonts/Raleway/Raleway_Regular.ttf);
+    src: url(../../fonts/Raleway/Raleway_Regular.woff);
+}
+
+@font-face {
+    font-family: Roboto_Regular;
+    src: url(../../fonts/Roboto/Roboto_Regular.ttf);
+    src: url(../../fonts/Roboto/Roboto_Regular.woff);
+}
+
+.site_header {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 130px;
+}
+
+.site_header_inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 30;
+}
+
+@media (max-width: 1200px) {
+    .container{
+        max-width: 1200px;
+    }
+}
+
+.header_mobile {
+    display: none;
+}
+
+.header_decstop {
+    display: none;
+}
+
+.header_row_1 {
+    display: flex;
+    background-color: white;
+    width: 100%;
+}
+
+.header_row_group_1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 80px;
+}
+
+.icon_logo {
+    width: 138px;
+    height: 40px;
+}
+
+.text_logo {
+    display: flex;
+    justify-content: flex-end;
+    font-family: Raleway_Regular;
+    font-size: 11px;
+    font-weight: 700;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.search_line {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    height: 80px;
+}
+
+.search_line input {
+    color: #909090;
+    font-family: Raleway_Regular;
+    font-size: 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 0 0 0 20px;
+    width: 100%;
+    height: 32px;
+}
+
+input.search_line::placeholder {
+    color: #909090;
+}
+
+.search_line button {
+    position: absolute;
+    border: none;
+    right: 5px;
+    height: 21px;
+    width: 21px;
+    background: url("../../img/320/icon_search.png");
+}
+
+.header_row_group_2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.basket {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 80px;
+}
+
+.shopping_list_img {
+    position: relative;
+    width: 26px;
+    height: 35px;
+}
+
+.items_basket_img {
+    position: absolute;
+    margin: 0 0 25px 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
+}
+
+.bookkeeping_header {
+    color: rgba(34, 34, 34, 0.503114);
+    font-family: Raleway_Regular;
+    font-size: 12px;
+    width: 100%;
+}
+
+.bookkeeping_content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 50px;
+}
+
+.bookkeeping_mail {
+    display: flex;
+    align-items: center;
+}
+
+.bookkeeping_tel {
+    display: flex;
+    align-items: center;
+}
+
+.sales_department_header {
+    color: rgba(34, 34, 34, 0.503114);
+    font-family: Raleway_Regular;
+    font-size: 12px;
+    width: 100%;
+}
+
+.sales_department_content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 50px;
+}
+
+.sales_department_mail {
+    display: flex;
+    align-items: center;
+}
+
+.sales_department_tel {
+    display: flex;
+    align-items: center;
+}
+
+.icon_mail {
+    width: 15px;
+    height: 12px;
+}
+
+.mail_info {
+    font-family: Raleway_Regular;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 8px;
+}
+
+.icon_tel {
+    width: 15px;
+    height: 15px;
+}
+
+.tel_info {
+    font-family: PT_Sans_Caption_Regular;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 8px;
+}
+
+.header_row_2 {
+    width: 100%;
+    background-color: #89C200;
+}
+
+.nav_menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #89C200;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+
+.menu_item {
+    display: flex;
+    font-size: 14px;
+    font-family: Raleway_Regular;
+    color: white;
+    text-decoration: none;
+    margin-right: 22px;
+}
+
+.menu_item_underline {
+    display: inline;
+    padding-bottom: 2px;
+    text-decoration: none;
+    box-shadow: inset 0 1px transparent;
+}
+
+.menu_item_underline:hover {
+    box-shadow: inset 0 -1px currentColor;
+}
+
+.content {
+    background-color: white;
+    width: 100%;
+}
+
+.antiseptics {
+    background-color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.breadcrumbs_list {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.breadcrumbs_list li {
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 30px;
+}
+
+.breadcrumbs_list li:nth-child(1) {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.breadcrumbs_list li:nth-child(3) a span  {
+    color: #999999;
+}
+
+.breadcrumb_item {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family: Roboto_Regular;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.breadcrumb_item_underline {
+    display: inline;
+    padding-bottom: 2px;
+    text-decoration: none;
+    box-shadow: inset 0 1px transparent;
+}
+
+.breadcrumb_item_underline:hover {
+    box-shadow: inset 0 -1px currentColor;
+}
+
+.info_company_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.documents_company {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid #F0F0F0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.price .icon_price {
+    display: flex;
+    margin-top: 8px;
+}
+
+.price_img {
+    width: 31px;
+    height: 30px;
+}
+
+.price_content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.price_title {
+    display: flex;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.price_content p {
+    display: flex;
+    color: #666666;
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.certificates {
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid #F0F0F0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.certificates .icon_certificates {
+    display: flex;
+    margin-top: 8px;
+}
+
+.certificates_img {
+    width: 32px;
+    height: 30px;
+}
+
+.certificates_content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.certificates_title {
+    display: flex;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.certificates_content p {
+    display: flex;
+    color: #666666;
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.antiseptics_header_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.antiseptics_header {
+    display: flex;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.hr_antiseptics {
+    display: flex;
+    background:  #89C200;
+    border: none;
+    margin: 8px 0 0 0;
+    width: 70px;
+    height: 5px;
+}
+
+.antiseptics_description_content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.antiseptics_description_content p {
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+}
+
+.catalog {
+    margin-top: 30px;
+}
+
+.sort_catalog {
+    display: flex;
+    justify-content: flex-end;
+    font-family: Roboto_Regular;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.catalog_cards_mobile {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.catalog_cards_decstop {
+    display: none;
+}
+
+.catalog_cards_content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50%;
+}
+
+.catalog_cards_item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 470px;
+}
+
+.catalog_cards_item:last-child {
+    margin-bottom: 0px;
+}
+
+.cards_label {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
+
+.novelty {
+    background: #89C200;
+    text-align: center;
+    color: white;
+    font-family: Roboto_Regular;
+    font-size: 16px;
+    border-radius: 12px;
+    line-height: 24px;
+    width: 91px;
+    height: 25px;
+}
+
+.sale {
+    background: #FA6400;
+    text-align: center;
+    color: white;
+    font-family: Roboto_Regular;
+    font-size: 16px;
+    border-radius: 12px;
+    line-height: 24px;
+    width: 125px;
+    height: 25px;
+}
+
+.cards_item_title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cards_title {
+    font-family: Roboto_Regular;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cards_item_title p {
+    color: #666666;
+    font-family: Roboto_Regular;
+    font-size: 13px;
+}
+
+.cards_item_content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.cards_item_content p {
+    font-family: Roboto_Regular;
+    font-size: 12px;
+}
+
+.cards_item_description {
+    display: flex;
+    flex-direction: column;
+}
+.cards_price {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards_price_title {
+    font-family: Raleway_Regular;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cards_price_content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.price_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product_quantity {
+    font-family: Raleway_Regular;
+    font-size: 12px;
+    width: 55%;
+}
+
+.price_product {
+    font-family: Roboto_Regular;
+    font-size: 14px;
+    font-weight: 900;
+    width: 40%;
+}
+
+.price_product span {
+    font-family: Roboto_Regular;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.order_content_section {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.counter_order {
+    display: flex;
+    margin-top: 20px;
+}
+
+.text_counter {
+    border: none;
+    font-family: Raleway_Regular;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.counter_buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.counter_buttons span {
+    background: #D8D8D8;
+    text-align: center;
+    border-radius: 3px;
+    font-family: Raleway_Regular;
+    font-size: 16px;
+    width: 18px;
+    height: 18px;
+}
+
+.counter_buttons span:last-child {
+    margin-top: 5px;
+}
+
+.order_button {
+    display: flex;
+}
+
+.order_button a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 112px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 7px;
+    font-family: Roboto_Regular;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    background: #FFD54C;
+    color: #000000;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.order_button a:hover {
+    background: orange;
+    box-shadow: 0 15px 20px rgba(46,229,157,.4);
+    transform: translateY(-7px);
+}
+
+.distributors_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.icon_distributors {
+    display: flex;
+}
+
+.distributors_content {
+    margin-top: 30px;
+}
+
+.distributors_title {
+    font-family: Raleway_Regular;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.distributors_content p {
+    font-family: Raleway_Regular;
+    font-size: 16px;
+}
+
+.distributors_button {
+    display: flex;
+}
+
+.distributors_button a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 7px;
+    font-family: Roboto_Regular;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    background: #FFD54C;
+    color: #000000;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.distributors_button a:hover {
+    background: orange;
+    box-shadow: 0 15px 20px rgba(46,229,157,.4);
+    transform: translateY(-7px);
+}
+
+.recommended_products {
+    margin-top: 70px;
+}
+
+.recommended_products_header {
+    display: flex;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.hr_recommended_products {
+    display: flex;
+    background:  #89C200;
+    border: none;
+    margin: 8px 0 0 0;
+    width: 70px;
+    height: 5px;
+}
+
+.slider_recommended_products {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.slider_content {
+    margin-top: 50px;
+}
+
+.slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider__recommended_products_item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    flex: 0 0 33.3333%;
+    width: 100%;
+    height: 370px;
+}
+
+.slider__recommended_products_item .cards_title {
+    color: #539DDF;
+}
+
+.slider__indicators {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    list-style: none;
+    bottom: 10px;
+}
+
+.slider__indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #D8D8D8;
+    background-clip: padding-box;
+    border-radius: 100%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transition: opacity .6s ease;
+}
+
+.slider__indicators li.active {
+    background-color:  #FFD54C;
+    opacity: 1;
+}
+
+.site_footer {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.footer_mobile {
+    display: none;
+}
+
+.footer_tablet_decstop {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.footer_tablet_decstop .logo {
+    height: auto;
+    align-items: center;
+    width: 70%;
+}
+
+.footer_tablet_decstop .text_logo {
+    display: block;
+    justify-content: center;
+    text-align: end;
+    width: 138px;
+}
+
+.info_company {
+    display: flex;
+    flex-direction: column;
+}
+.address_company {
+    display: flex;
+    margin-top: 20px;
+}
+
+.address_title {
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: end;
+    width: 35%;
+}
+
+.address_info {
+    display: flex;
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 10px;
+    width: 65%;
+}
+
+.contacts_footer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.contacts_title {
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: end;
+    width: 35%;
+}
+
+.contacts_section_content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 65%;
+}
+
+.contacts_footer .bookkeeping_header {
+    color: black;
+    font-weight: 700;
+}
+
+.contacts_footer .mail_info {
+    padding-left: 0px;
+    text-decoration: none;
+}
+
+.contacts_footer .sales_department_header {
+    color: black;
+    font-weight: 700;
+}
+
+.tel_company {
+    display: flex;
+    margin-top: 20px;
+}
+
+.tel_title {
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: end;
+    width: 35%;
+}
+
+.tel_section_content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 65%;
+}
+
+.tel_company .tel_info {
+    text-decoration: none;
+    font-family: Raleway_Regular;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 0px;
+}
+
+.categories_title {
+    list-style: none;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 40px;
+}
+
+.information_title {
+    list-style: none;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.about_us_title {
+    list-style: none;
+    font-family: Raleway_Regular;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Raleway_Regular;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+</head>
+<body>
+<h2>Загадайте число от 1 до 100!</h2>
+<script>
+    var  a, value_number, max, min;
+    value_number = 50
+    a = 50;
+    max = 100;
+    min = 1;
+
+</script>
+<div id="text">Это число 50?</div>
+<p></p>
+<input id="yes" value="Да" onclick="counttrue()" type="button">
+<input id="more" value="Больше" onclick="countmore()" type="button">
+<input id="less" value="Меньше" onclick="countless()" type="button">
+
+<script>
+    function countmore() {
+
+        a = Math.ceil(a / 2);
+        value_number = value_number + a;
+        if (value_number < max) {
+        document.getElementById("text").innerText = "Это число "  + value_number + "?";
+        }
+        else
+        document.getElementById("text").innerText = "Это число "  + max;
+    }
+    function countless() {
+        a = Math.ceil(a / 2);
+        value_number = value_number - a;
+        if (value_number > min) {
+            document.getElementById("text").innerText = "Это число " + value_number + "?";
+        }
+        else
+            document.getElementById("text").innerText = "Это число "  + min;
+    }
+    function counttrue() {
+        document.getElementById("text").innerText = "Ура, ваше число "  + value_number + "!";
+    }
+</script>
+</body>
+</html>
